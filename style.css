@@ -4,15 +4,23 @@ html {
 
 body {
   background-image: url(images/adventcalendar-background-mobile.png);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
   background-size: auto 100%;
   margin: 0;
   height: 100%;
+  font-family: monospace;
+  font-size: 20px;
 }
 
 #title {
   grid-area: t01;
+
+  background-image: url(images/title-image.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  height: 10rem;
 }
 
 #day01 {
@@ -118,7 +126,7 @@ body {
   margin: 2% auto;
 
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(9, 12%);
+  grid-template-rows: auto;
   grid-gap: 25px;
 
   grid-template-areas:
@@ -140,7 +148,6 @@ body {
 
   #grid {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(7, 15%);
 
     grid-template-areas:
       "d04    d20    d12    d02"
@@ -148,8 +155,13 @@ body {
       "t01    t01    d08    d11"
       "d22    d09    d15    d05"
       "d16    d06    d10    d14"
-      "d01    d13    d24    d24"
+      "d01    d13    d24    d18"
       "d19    d07    d21    d03";
+  }
+
+  #title {
+    background-image: url(images/title-image-middle.png);
+    height: auto;
   }
 }
 
@@ -160,7 +172,6 @@ body {
 
   #grid {
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 20%);
 
     grid-template-areas:
       "d02    t01     t01     t01     d07     d08"
@@ -172,9 +183,50 @@ body {
   }
 }
 
-#grid div {
-  /*background: #2e313d;*/
-  padding: 40px;
+#grid input {
+  display: none;
+}
+
+label {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+
+  display: flex;
+  min-height: 100%;
+  width: 100%;
+  height: 120px;
+}
+
+.door {
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 300ms;
+  border: 2px dashed transparent;
+}
+
+.door div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.door .back {
+  background-color: #2e313d;
+  transform: rotateY(180deg);
+}
+
+label:hover .door {
+  border-color: #385052;
+}
+
+:checked + .door {
+  transform: rotateY(180deg);
 }
 
 .snowflake {
