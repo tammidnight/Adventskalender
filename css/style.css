@@ -1,0 +1,243 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-image: url(../images/adventcalendar-background-mobile.png);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: auto 100%;
+  margin: 0;
+  height: 100%;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+#title {
+  grid-area: t01;
+
+  background-image: url(../images/title-image.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  height: 10rem;
+}
+
+#day01 {
+  grid-area: d01;
+}
+
+#day02 {
+  grid-area: d02;
+}
+
+#day03 {
+  grid-area: d03;
+}
+
+#day04 {
+  grid-area: d04;
+}
+
+#day05 {
+  grid-area: d05;
+}
+
+#day06 {
+  grid-area: d06;
+}
+
+#day07 {
+  grid-area: d07;
+}
+
+#day08 {
+  grid-area: d08;
+}
+
+#day09 {
+  grid-area: d09;
+}
+
+#day10 {
+  grid-area: d10;
+}
+
+#day11 {
+  grid-area: d11;
+}
+
+#day12 {
+  grid-area: d12;
+}
+
+#day13 {
+  grid-area: d13;
+}
+
+#day14 {
+  grid-area: d14;
+}
+
+#day15 {
+  grid-area: d15;
+}
+
+#day16 {
+  grid-area: d16;
+}
+
+#day17 {
+  grid-area: d17;
+}
+
+#day18 {
+  grid-area: d18;
+}
+
+#day19 {
+  grid-area: d19;
+}
+
+#day20 {
+  grid-area: d20;
+}
+
+#day21 {
+  grid-area: d21;
+}
+
+#day22 {
+  grid-area: d22;
+}
+
+#day23 {
+  grid-area: d23;
+}
+
+#day24 {
+  grid-area: d24;
+}
+
+#grid {
+  display: grid;
+  width: 96%;
+  max-width: 1200px;
+  margin: 2% auto;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 25px;
+
+  grid-template-areas:
+    "t01    t01     t01"
+    "d23    d20     d12"
+    "d02    d14     d04"
+    "d05    d22     d16"
+    "d01    d07     d09"
+    "d10    d24     d18"
+    "d13    d03     d15"
+    "d06    d17     d08"
+    "d19    d11     d21";
+}
+
+@media (min-width: 600px) {
+  body {
+    background-image: url(../images/adventcalendar-background-middle.png);
+  }
+
+  #grid {
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-areas:
+      "d04    d20    d12    d02"
+      "t01    t01    d17    d23"
+      "t01    t01    d08    d11"
+      "d22    d09    d15    d05"
+      "d16    d06    d10    d14"
+      "d01    d13    d24    d18"
+      "d19    d07    d21    d03";
+  }
+
+  #title {
+    background-image: url(../images/title-image-middle.png);
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    background-image: url(../images/adventcalendar-background-screen.png);
+    font-size: 24px;
+  }
+
+  #grid {
+    grid-template-columns: repeat(6, 1fr);
+
+    grid-template-areas:
+      "d02    t01     t01     t01     d07     d08"
+      "d04    t01     t01     t01     d11     d12"
+      "d19    t01     t01     t01     d09     d13"
+      "d06    d01     d14     d10     d21     d20"
+      "d17    d18     d05     d24     d24     d22"
+      "d03    d23     d16     d24     d24     d15";
+  }
+}
+
+#grid input {
+  display: none;
+}
+
+label {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+
+  display: flex;
+  min-height: 100%;
+  width: 100%;
+  height: 120px;
+}
+
+.door {
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 300ms;
+  border: 2px dashed transparent;
+  border-radius: 10%;
+}
+
+.door div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.door .back {
+  background-color: #2e313d;
+  transform: rotateY(180deg);
+}
+
+label:hover .door {
+  border-color: #385052;
+}
+
+#image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 75%;
+}
+
+#image img {
+  width: 100%;
+}

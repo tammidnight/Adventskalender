@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adventcalendar</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/snowflakes.css">
   </head>
   <body>
     <section id="grid">
@@ -15,7 +16,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>1</div>
-                <div class='back'><img src="images/title-image.png" alt="day01"></div>
               </div>
             </input>
           </label>
@@ -25,7 +25,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>2</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -35,7 +34,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>3</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -45,7 +43,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>4</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -55,7 +52,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>5</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -65,7 +61,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>6</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -75,7 +70,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>7</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -85,7 +79,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>8</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -95,7 +88,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>9</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -105,7 +97,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>10</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -115,7 +106,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>11</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -125,7 +115,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>12</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -135,7 +124,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>13</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -145,7 +133,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>14</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -155,7 +142,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>15</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -165,7 +151,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>16</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -175,7 +160,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>17</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -185,7 +169,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>18</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -195,7 +178,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>19</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -205,7 +187,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>20</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -215,7 +196,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>21</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -225,7 +205,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>22</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -235,7 +214,6 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>23</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
@@ -245,12 +223,13 @@
             <input type='checkbox'>
               <div class='door'>
                 <div class='front'>24</div>
-                <div class='back'></div>
               </div>
             </input>
           </label>
       </div>
+      <div id="image"><img src="./images/days/01.png" alt="day01"></div>
     </section>
+    
     <div class="snowflakes" aria-hidden="true">
       <div class="snowflake">❅</div>
       <div class="snowflake">❆</div>
@@ -265,5 +244,7 @@
       <div class="snowflake">❅</div>
       <div class="snowflake">❆</div>
     </div>
+    <script src="./src/load.js"></script>
+    <script src="./src/script.js"></script>
   </body>
 </html>
